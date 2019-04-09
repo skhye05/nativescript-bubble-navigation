@@ -1,39 +1,76 @@
-# Your Plugin Name
+# Nativescript Bubble Navigation ![apple](https://cdn3.iconfinder.com/data/icons/picons-social/57/16-apple-32.png) ![android](https://cdn4.iconfinder.com/data/icons/logos-3/228/android-32.png) 
 
-Add your plugin badges here. See [nativescript-urlhandler](https://github.com/hypery2k/nativescript-urlhandler) for example.
+[![npm](https://img.shields.io/npm/v/nativescript-bubble-navigation.svg)](https://www.npmjs.com/package/nativescript-bubble-navigation)
+[![npm](https://img.shields.io/npm/dt/nativescript-bubble-navigation.svg?label=npm%20downloads)](https://www.npmjs.com/package/nativescript-bubble-navigation)
 
 Then describe what's the purpose of your plugin. 
 
 In case you develop UI plugin, this is where you can add some screenshots.
 
-## (Optional) Prerequisites / Requirements
+## Overview
 
-Describe the prerequisites that the user need to have installed before using your plugin. See [nativescript-firebase plugin](https://github.com/eddyverbruggen/nativescript-plugin-firebase) for example.
+ Nativescript Multi Select is a navigation tab plugins which provides beautiful navigations.
+
+ <p>
+  <img src="https://raw.githubusercontent.com/skhye05/NativeScript-Bubble-Navigation/master/ios.gif"  width="300"/>
+  <img src="https://raw.githubusercontent.com/skhye05/NativeScript-Bubble-Navigation/master/android.gif" width="300"/>
+</p>
 
 ## Installation
 
-Describe your plugin installation steps. Ideally it would be something like:
-
 ```javascript
-tns plugin add <your-plugin-name>
+tns plugin add nativescript-bubble-navigation
 ```
 
-## Usage 
+## Usage
 
-Describe any usage specifics for your plugin. Give examples for Android, iOS, Angular if needed. See [nativescript-drop-down](https://www.npmjs.com/package/nativescript-drop-down) for example.
-	
-	```javascript
-    Usage code snippets here
-    ```)
+### <img src="https://raw.githubusercontent.com/skhye05/NativeScript-Bubble-Navigation/master/res/typescript.png" width="20"/> TypeScript
+
+```typescript
+```
+
+```xml
+```
+
+### <img src="https://raw.githubusercontent.com/skhye05/nativescript-Bubble-Navigation/master/res/angular.png" width="20"/> Angular
+
+```typescript
+```
+
+```typescript
+```
+
+```html
+```
+
+### <img src="https://raw.githubusercontent.com/skhye05/NativeScript-Bubble-Navigation/master/res/vue.png" width="20"/> Vue
+
+```typescript
+```
+
+```html
+```
 
 ## API
 
-Describe your plugin methods and properties here. See [nativescript-feedback](https://github.com/EddyVerbruggen/nativescript-feedback) for example.
-    
-| Property | Default | Description |
-| --- | --- | --- |
-| some property | property default value | property description, default values, etc.. |
-| another property | property default value | property description, default values, etc.. |
+### BubbleNavigation
+
+| Property                  | Type        | Description              | Platforms | 
+| ------------------------- | ----------- | ------------------------ |-----------|
+
+### BubbleNavigationItem
+
+| Property                  | Type        | Description              | Platforms |
+| ------------------------- | ----------- | ------------------------ |-----------|
+
+## Author
+
+Jonathan Mayunga, mayunga.j@gmail.com
+
+## Credits
+
+- For Android we're using the [Bubble Navigation by Gaurav Kumar](https://github.com/gauravk95/bubble-navigation),
+- For iOS [BubbleTabBar by Cuberto](https://github.com/Cuberto/bubble-icon-tabbar).
     
 ## License
 
