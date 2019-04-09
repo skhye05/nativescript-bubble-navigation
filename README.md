@@ -1,7 +1,11 @@
 # Nativescript Bubble Navigation ![apple](https://cdn3.iconfinder.com/data/icons/picons-social/57/16-apple-32.png) ![android](https://cdn4.iconfinder.com/data/icons/logos-3/228/android-32.png) 
 
 [![npm](https://img.shields.io/npm/v/nativescript-bubble-navigation.svg)](https://www.npmjs.com/package/nativescript-bubble-navigation)
-[![npm](https://img.shields.io/npm/dt/nativescript-bubble-navigation.svg?label=npm%20downloads)](https://www.npmjs.com/package/nativescript-bubble-navigation) [![Build Status][build-status]][build-url][build-status]:https://travis-ci.org/skhye05/nativescript-bubble-navigation.svg?branch=master[build-url]:https://travis-ci.org/skhye05/nativescript-bubble-navigation
+[![npm](https://img.shields.io/npm/dt/nativescript-bubble-navigation.svg?label=npm%20downloads)](https://www.npmjs.com/package/nativescript-bubble-navigation)
+ [![Build Status][build-status]][build-url]
+ 
+ [build-status]:https://travis-ci.org/skhye05/nativescript-bubble-navigation.svg?branch=master
+ [build-url]:https://travis-ci.org/skhye05/nativescript-bubble-navigation
 
 Then describe what's the purpose of your plugin. 
 
