@@ -1,7 +1,7 @@
 {
     "name": "nativescript-bubble-navigation",
     "version": "1.0.0",
-    "description": "Your awesome NativeScript plugin.",
+    "description": "Nativescript plugin for Android & iOS that create beautiful navigation tabs",
     "main": "bubble-navigation",
     "typings": "index.d.ts",
     "nativescript": {
@@ -15,8 +15,10 @@
         "url": "https://github.com/skhye05/nativescript-bubble-navigation.git"
     },
     "scripts": {
-        "tsc": "tsc",
-        "build": "npm run tsc && npm run build.native",
+        "tsc": "tsc -skipLibCheck",
+        "ngc.clean": "find ./ angular/ -name '*.metadata.json' -delete",
+        "ngc": "npm i && npm run ngc.clean && node --max-old-space-size=8192 node_modules/.bin/ngc -skipLibCheck -p tsconfig.json",
+        "build": "npm i && tsc && npm run ngc",
         "build.native": "node scripts/build-native.js",
         "postclone": "npm i && node scripts/postclone.js && cd ../demo && npm i && npx rimraf -- package-lock.json && cd ../src",
         "test.android": "npm run tsc && npm run tslint && cd ../demo && tns build android && tns test android --justlaunch",
@@ -24,22 +26,46 @@
         "tslint": "cd .. && tslint \"**/*.ts\" --config tslint.json --exclude \"**/node_modules/**\"",
         "plugin.tscwatch": "npm run tsc -- -w",
         "demo.ios": "npm run tsc && cd ../demo && tns run ios --syncAllFiles --emulator",
-        "demo.android": "npm run tsc && cd ../demo && tns run android --syncAllFiles --emulator",
+        "demo.ng.ios": "npm run preparedemo-ng tsc && cd ../demo-ng && tns run ios --bundle --syncAllFiles",
+        "demo.ng.ios.aot": "npm run preparedemo-ng tsc && cd ../demo-ng && tns run ios --bundle --syncAllFiles --env.aot --env.uglify",
+        "demo.vue.ios": "npm run preparedemo-vue && cd ../demo-vue && tns run ios --bundle --syncAllFiles",
+        "demo.android": "npm run tsc && cd ../demo && tns run android --syncAllFiles",
+        "demo.ng.android": "cd ../demo-ng && tns plugin add ../publish/nativescript-bubble-navigation-1.0.0.tgz && tns install && tns run android --bundle --syncAllFiles",
+        "demo.ng.android.aot": "npm run preparedemo-ng && cd ../demo-ng && tns run android --bundle --syncAllFiles --env.aot --env.uglify",
+        "demo.vue.android": "npm run preparedemo-vue && cd ../demo-vue && tns run android --bundle --syncAllFiles",
         "demo.reset": "cd ../demo && npx rimraf -- hooks node_modules platforms package-lock.json",
+        "demo.ng.reset": "cd ../demo-ng && rimraf -- hooks node_modules platforms package-lock.json",
+        "demo.vue.reset": "cd ../demo-vue && rimraf -- hooks node_modules platforms package-lock.json",
         "plugin.prepare": "npm run build && cd ../demo && tns plugin remove nativescript-bubble-navigation && tns plugin add ../src",
+        "plugin.ng.prepare": "npm run build && cd ../demo-ng && tns plugin remove nativescript-bubble-navigation && tns plugin add ../src",
+        "plugin.vue.prepare": "npm run build && cd ../demo-vue && tns plugin remove nativescript-bubble-navigation && tns plugin add ../src",
+        "preparedemo": "npm run tsc && npm run package && cd ../demo && tns plugin add ../publish/package/*.tgz && tns install",
+        "preparedemo-ng": "npm run tsc && npm run package && cd ../demo-ng && tns plugin remove nativescript-bubble-navigation && tns plugin add ../publish/package/*.tgz && tns install",
+        "preparedemo-vue": "npm run tsc && npm run package && cd ../demo-vue && tns plugin remove nativescript-bubble-navigation && tns plugin add ../publish/package/*.tgz && tns install",
         "clean": "npm run demo.reset && npx rimraf -- node_modules package-lock.json && npm i",
+        "clean.ng": "npm run demo.ng.reset && npx rimraf -- node_modules package-lock.json && npm i",
+        "clean.vue": "npm run demo.vue.reset && npx rimraf -- node_modules package-lock.json && npm i",
         "ci.tslint": "npm i && tslint '**/*.ts' --config '../tslint.json' --exclude '**/node_modules/**' --exclude '**/platforms/**'",
-        "prepack": "npm run build.native"
+        "prepack": "npm run build.native",
+        "package": "cd ../publish && pack.sh"
     },
     "keywords": [
         "NativeScript",
         "JavaScript",
         "Android",
-        "iOS"
+        "iOS",
+        "Bubble Navigation",
+        "Bubble Nav",
+        "TabBar",
+        "Bubble Tabbar",
+        "BubbleTabBar",
+        "BubbleTab",
+        "TabBar Navigation",
+        "Tab Navigation"
     ],
     "author": {
-        "name": "Your Name",
-        "email": "youremail@yourdomain.com"
+        "name": "Jonathan Mayunga",
+        "email": "mayunga.j@gmail.com"
     },
     "bugs": {
         "url": "https://github.com/skhye05/nativescript-bubble-navigation/issues"
@@ -48,6 +74,12 @@
     "homepage": "https://github.com/skhye05/nativescript-bubble-navigation",
     "readmeFilename": "README.md",
     "devDependencies": {
+        "@angular/common": "~7.2.0",
+        "@angular/compiler": "~7.2.0",
+        "@angular/compiler-cli": "~7.2.0",
+        "@angular/core": "~7.2.0",
+        "nativescript-angular": "~7.2.0",
+        "rxjs": "^6.3.0",
         "tns-core-modules": "^5.0.0",
         "tns-platform-declarations": "^5.0.0",
         "typescript": "~3.3.3",
