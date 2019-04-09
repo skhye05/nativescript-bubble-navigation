@@ -10,11 +10,11 @@ export class HelloWorldModel extends Observable {
     super();
 
     this.tabs = [
-      new BubbleNavigationItem('Home', 'ic_home', '#f44336', '#e57373'),
-      new BubbleNavigationItem('Search', 'ic_search', '#03a9f4', '#64b5f6'),
-      new BubbleNavigationItem('Likes', 'ic_like', '#607d8b', '#90a4ae'),
-      new BubbleNavigationItem('Notify', 'ic_playlist', '#4caf50', '#81c784'),
-      new BubbleNavigationItem('Profile', 'ic_person', '#9c27b0', '#ba68c8')
+      new BubbleNavigationItem('Events', 'dashboard', '#f44336', '#e57373'),
+      new BubbleNavigationItem('Search', 'clock', '#03a9f4', '#64b5f6'),
+      new BubbleNavigationItem('Activity', 'folder', '#607d8b', '#90a4ae'),
+      new BubbleNavigationItem('Settings', 'menu', '#4caf50', '#81c784'),
+      // new BubbleNavigationItem('Profile', 'ic_person', '#9c27b0', '#ba68c8')
     ];
   }
 
