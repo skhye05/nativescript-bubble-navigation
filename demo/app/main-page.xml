@@ -2,7 +2,7 @@
   xmlns:ui="nativescript-bubble-navigation">
   <GridLayout rows="* auto" colunms="*" backgroundColor="{{ bg }}">
     <StackLayout row="0" class="p-20">
-      <Label class="h1" color="white" horizontalAlignment="center" text="{{ title }}"/>
+      <Label class="h2" color="white" horizontalAlignment="center" text="{{ title }}"/>
     </StackLayout>
     <ui:BubbleNavigation row="1" tabs="{{ tabs }}" loaded="onBubbleNavigationLoaded" padding="12" tabBackgroundColor="white" elevation="8"/>
   </GridLayout>

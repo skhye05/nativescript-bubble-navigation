@@ -24,10 +24,13 @@ describe("sample scenario", () => {
         let btnTap;
         if (driver.isAndroid) {
             btnTap = await driver.findElementsByClassName('android.widget.ImageView');
+            await btnTap[1].click();
         } else {
-            btnTap = await driver.findElementsByClassName('CBBB');
+            btnTap = await driver.findElementsByClassName(driver.locators.getElementByName("image"));
+            let point;
+            await btnTap[1].getRectangle().then(value => { point = value; });
+            await driver.clickPoint(point.x + 15, point.y + 15);
         }
-        await btnTap[1].click();
 
         const message = "SEARCH TAB!";
         const lblMessage = await driver.findElementByText(message, SearchOptions.contains);
@@ -38,10 +41,13 @@ describe("sample scenario", () => {
         let btnTap;
         if (driver.isAndroid) {
             btnTap = await driver.findElementsByClassName('android.widget.ImageView');
+            await btnTap[2].click();
         } else {
-            btnTap = await driver.findElementsByClassName('CBBB');
+            btnTap = await driver.findElementsByClassName(driver.locators.getElementByName("image"));
+            let point;
+            await btnTap[2].getRectangle().then(value => { point = value; });
+            await driver.clickPoint(point.x + 15, point.y + 15);
         }
-        await btnTap[2].click();
 
         const message = "LIKES TAB!";
         const lblMessage = await driver.findElementByText(message, SearchOptions.contains);
@@ -52,26 +58,15 @@ describe("sample scenario", () => {
         let btnTap;
         if (driver.isAndroid) {
             btnTap = await driver.findElementsByClassName('android.widget.ImageView');
+            await btnTap[3].click();
         } else {
-            btnTap = await driver.findElementsByClassName('CBTabBarItem');
+            btnTap = await driver.findElementsByClassName(driver.locators.getElementByName("image"));
+            let point;
+            await btnTap[3].getRectangle().then(value => { point = value; });
+            await driver.clickPoint(point.x + 15, point.y + 15);
         }
-        await btnTap[3].click();
 
         const message = "NOTIFY TAB!";
-        const lblMessage = await driver.findElementByText(message, SearchOptions.contains);
-        assert.equal(await lblMessage.text(), message);
-    });
-
-    it("should tap profile tab", async () => {
-        let btnTap;
-        if (driver.isAndroid) {
-            btnTap = await driver.findElementsByClassName('android.widget.ImageView');
-        } else {
-            btnTap = await driver.findElementsByClassName('CBBB');
-        }
-        await btnTap[4].click();
-
-        const message = "PROFILE TAB!";
         const lblMessage = await driver.findElementByText(message, SearchOptions.contains);
         assert.equal(await lblMessage.text(), message);
     });
@@ -80,10 +75,13 @@ describe("sample scenario", () => {
         let btnTap;
         if (driver.isAndroid) {
             btnTap = await driver.findElementsByClassName('android.widget.ImageView');
+            await btnTap[0].click();
         } else {
-            btnTap = await driver.findElementsByClassName('CBBB');
+            btnTap = await driver.findElementsByClassName(driver.locators.getElementByName("image"));
+            let point;
+            await btnTap[0].getRectangle().then(value => { point = value; });
+            await driver.clickPoint(point.x + 15, point.y + 15);
         }
-        await btnTap[0].click();
 
         const message = "HOME TAB!";
         const lblMessage = await driver.findElementByText(message, SearchOptions.contains);
