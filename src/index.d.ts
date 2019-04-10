@@ -7,19 +7,24 @@ export declare interface OnTabSelectedEventData extends EventData {
 }
 
 export declare abstract class BubbleNavigationBase extends View {
+  readonly tabs: BubbleNavigationItemBase[];
 
-  public tabs: BubbleNavigationItemBase[];
+  constructor();
 
-  public mainBackgroundColor: string;
+  protected _tabs: BubbleNavigationItemBase[];
 
-  public selectedTabIndex: number;
+  selectedTabIndex: number;
 
-  public selectTab(index: number): void;
+  mainBackgroundColor: string;
+
+  selectTab(index: number): void;
+
+  onTabSelected(index: number): void;
 
   protected abstract selectTabNative(index: number): void;
 }
 
-export declare class BubbleNavigationItemBase {
+export declare class BubbleNavigationItemBase extends View {
 
   public title: string;
 
@@ -29,16 +34,14 @@ export declare class BubbleNavigationItemBase {
 
   public colorInactive: string;
 
-  parent: WeakRef<BubbleNavigationBase>;
-
-  constructor(title: string, icon: string, colorActive?: string, colorInactive?: string, parent?: WeakRef<BubbleNavigationBase>);
+  constructor(title: string, icon: string, colorActive?: string, colorInactive?: string);
 }
 
 export declare class BubbleNavigation extends BubbleNavigationBase {
 
   private _delegate;
 
-  constructor();
+  constructor();ƒ
 
   public bindTabs(tabs: BubbleNavigation[]): void;
 
@@ -46,5 +49,5 @@ export declare class BubbleNavigation extends BubbleNavigationBase {
 }
 
 export declare class BubbleNavigationItem extends BubbleNavigationItemBase {
-  constructor(title: string, icon: string, colorActive?: string, colorInactive?: string, parent?: WeakRef<BubbleNavigationBase>);
+  constructor(title: string, icon: string, colorActive?: string, colorInactive?: string);
 }

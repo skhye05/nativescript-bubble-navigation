@@ -59,9 +59,12 @@ tns plugin add nativescript-bubble-navigation
 
 ### BubbleNavigation
 
-| Property                  | Type        | Description              | Platforms | 
-| ------------------------- | ----------- | ------------------------ |-----------|
-
+| Property                  | Type                          | Description              | Platforms     | 
+| ------------------------- | ----------------------------- | ------------------------ |-------------- |
+| tabs                      | `Array<BubbleNavigationItem>` |                          | Android & iOS |
+| padding                   | `number`                      |                          | Android       |
+| tabBackgroundColor        | `string`                      |                          | Android & iOS |
+| elevation                 | `number`                      |                          | Android       |
 ### BubbleNavigationItem
 
 | Property                  | Type        | Description              | Platforms |

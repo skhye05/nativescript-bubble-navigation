@@ -13,10 +13,20 @@ export declare interface OnTabSelectedEventData extends EventData {
 
 export abstract class BubbleNavigationBase extends View {
 
+
+  get tabs(): BubbleNavigationItemBase[] {
+    return this._tabs;
+  }
+
+  constructor() {
+    super();
+    this._tabs = <BubbleNavigationItemBase[]>[];
+  }
+
   /**
    * Get or set the Bottom Navigation tabs
    */
-  public tabs: BubbleNavigationItemBase[];
+  protected _tabs: BubbleNavigationItemBase[];
 
   /**
    * Get or set the current selected tab index
@@ -84,14 +94,17 @@ export const elevationProperty = new Property<BubbleNavigationBase, string>(
 
 elevationProperty.register(BubbleNavigationBase);
 
-export class BubbleNavigationItemBase {
+export class BubbleNavigationItemBase extends View {
 
-  constructor(title: string, icon: string, colorActive?: string, colorInactive?: string, parent?: WeakRef<BubbleNavigationBase>) {
+  index?: number;
+
+  constructor(title: string, icon: string, colorActive?: string, colorInactive?: string) {
+    super();
     this._title = title;
     this._icon = icon;
     if (colorActive) { this._colorActive = colorActive; }
     if (colorInactive) { this._colorInactive = colorInactive; }
-    if (parent) { this._parent = parent; }
+    // if (parent) { this._parent = parent; }
   }
 
   // Tab Name
@@ -144,15 +157,15 @@ export class BubbleNavigationItemBase {
     }
   }
 
-  private _parent?: WeakRef<BubbleNavigationBase>;
+  // private _parent?: WeakRef<BubbleNavigationBase>;
 
-  get parent(): WeakRef<BubbleNavigationBase> {
-    return this._parent;
-  }
+  // get parent(): WeakRef<BubbleNavigationBase> {
+  //   return this._parent;
+  // }
 
-  set parent(value: WeakRef<BubbleNavigationBase>) {
-    if (this._parent !== value) {
-      this._parent = value;
-    }
-  }
+  // set parent(value: WeakRef<BubbleNavigationBase>) {
+  //   if (this._parent !== value) {
+  //     this._parent = value;
+  //   }
+  // }
 }

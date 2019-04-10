@@ -1,0 +1,2 @@
+platform :ios, '10.0'
+pod 'BubbleTabBar', :git => 'https://github.com/skhye05/bubble-icon-tabbar.git'

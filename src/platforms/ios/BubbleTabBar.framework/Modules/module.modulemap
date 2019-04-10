@@ -1,4 +1,0 @@
-framework module BubbleTabBar {
-  header "BubbleTabBar-Swift.h"
-  requires objc
-}

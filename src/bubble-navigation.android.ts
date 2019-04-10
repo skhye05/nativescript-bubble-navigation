@@ -45,7 +45,7 @@ export class BubbleNavigation extends BubbleNavigationBase {
     }
 
     bindTabs(tabs: BubbleNavigationItem[]) {
-        if (!this.tabs) { this.tabs = tabs; }
+        if (!this.tabs) { this._tabs = tabs; }
 
         for (let tab of tabs) {
             const bubbleToggle = new BubbleToggleView(this._context);
@@ -116,7 +116,7 @@ export class BubbleNavigation extends BubbleNavigationBase {
 }
 
 export class BubbleNavigationItem extends BubbleNavigationItemBase {
-    constructor(title: string, icon: string, colorActive?: string, colorInactive?: string, parent?: WeakRef<BubbleNavigationBase>) {
-        super(title, icon, colorActive, colorInactive, parent);
+    constructor(title: string, icon: string, colorActive?: string, colorInactive?: string) {
+        super(title, icon, colorActive, colorInactive);
     }
 }

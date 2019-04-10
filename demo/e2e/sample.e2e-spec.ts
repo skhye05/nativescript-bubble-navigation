@@ -21,7 +21,12 @@ describe("sample scenario", () => {
     });
 
     it("should tap search tab", async () => {
-        const btnTap = await driver.findElementsByClassName('android.widget.ImageView');
+        let btnTap;
+        if (driver.isAndroid) {
+            btnTap = await driver.findElementsByClassName('android.widget.ImageView');
+        } else {
+            btnTap = await driver.findElementsByClassName('CBBB');
+        }
         await btnTap[1].click();
 
         const message = "SEARCH TAB!";
@@ -30,7 +35,12 @@ describe("sample scenario", () => {
     });
 
     it("should tap likes tab", async () => {
-        const btnTap = await driver.findElementsByClassName('android.widget.ImageView');
+        let btnTap;
+        if (driver.isAndroid) {
+            btnTap = await driver.findElementsByClassName('android.widget.ImageView');
+        } else {
+            btnTap = await driver.findElementsByClassName('CBBB');
+        }
         await btnTap[2].click();
 
         const message = "LIKES TAB!";
@@ -39,7 +49,12 @@ describe("sample scenario", () => {
     });
 
     it("should tap notify tab", async () => {
-        const btnTap = await driver.findElementsByClassName('android.widget.ImageView');
+        let btnTap;
+        if (driver.isAndroid) {
+            btnTap = await driver.findElementsByClassName('android.widget.ImageView');
+        } else {
+            btnTap = await driver.findElementsByClassName('CBTabBarItem');
+        }
         await btnTap[3].click();
 
         const message = "NOTIFY TAB!";
@@ -48,7 +63,12 @@ describe("sample scenario", () => {
     });
 
     it("should tap profile tab", async () => {
-        const btnTap = await driver.findElementsByClassName('android.widget.ImageView');
+        let btnTap;
+        if (driver.isAndroid) {
+            btnTap = await driver.findElementsByClassName('android.widget.ImageView');
+        } else {
+            btnTap = await driver.findElementsByClassName('CBBB');
+        }
         await btnTap[4].click();
 
         const message = "PROFILE TAB!";
@@ -57,7 +77,12 @@ describe("sample scenario", () => {
     });
 
     it("should tap home tab", async () => {
-        const btnTap = await driver.findElementsByClassName('android.widget.ImageView');
+        let btnTap;
+        if (driver.isAndroid) {
+            btnTap = await driver.findElementsByClassName('android.widget.ImageView');
+        } else {
+            btnTap = await driver.findElementsByClassName('CBBB');
+        }
         await btnTap[0].click();
 
         const message = "HOME TAB!";
