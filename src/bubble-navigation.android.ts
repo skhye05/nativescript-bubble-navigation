@@ -1,5 +1,3 @@
-/// <reference path="./typings/bubble-navigation.android.d.ts" />
-
 import {
     BubbleNavigationBase,
     BubbleNavigationItemBase,
