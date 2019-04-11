@@ -41,8 +41,8 @@ export declare class BubbleNavigation extends BubbleNavigationBase {
 
   private _delegate;
 
-  constructor();ƒ
-
+  constructor();
+  
   public bindTabs(tabs: BubbleNavigation[]): void;
 
   protected selectTabNative(index: number): void;
