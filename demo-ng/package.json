@@ -33,15 +33,9 @@
     "@angular/compiler-cli": "~7.2.0",
     "@nativescript/schematics": "~0.5.0",
     "@ngtools/webpack": "~7.2.0",
-    "@types/chai": "~4.1.7",
-    "@types/mocha": "~5.2.5",
-    "@types/node": "~10.12.18",
-    "mocha": "~5.2.0",
-    "mocha-junit-reporter": "~1.18.0",
-    "mocha-multi": "~1.0.1",
-    "nativescript-dev-appium": "^5.2.0",
     "nativescript-dev-typescript": "~0.9.0",
-    "nativescript-dev-webpack": "~0.21.0"
+    "nativescript-dev-webpack": "~0.21.0",
+    "tslint": "^5.12.1"
   },
   "gitHead": "803cec054c44c99eaa59cdc267993e6346f6cb3a",
   "readme": "NativeScript Application",
