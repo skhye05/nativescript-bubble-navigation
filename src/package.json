@@ -47,7 +47,7 @@
         "clean.vue": "npm run demo.vue.reset && npx rimraf -- node_modules package-lock.json && npm i",
         "ci.tslint": "npm i && tslint '**/*.ts' --config '../tslint.json' --exclude '**/node_modules/**'",
         "prepack": "npm run build.native",
-        "package": "cd ../publish && pack.sh"
+        "package": "cd ../publish && ./pack.sh"
     },
     "keywords": [
         "NativeScript",
