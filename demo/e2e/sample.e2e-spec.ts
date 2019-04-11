@@ -21,6 +21,8 @@ describe("sample scenario", () => {
     });
 
     it("should tap search tab", async () => {
+        await driver.startRecordingVideo('new_test');
+
         let btnTap;
         if (driver.isAndroid) {
             btnTap = await driver.findElementsByClassName('android.widget.ImageView');
@@ -85,6 +87,7 @@ describe("sample scenario", () => {
 
         const message = "HOME TAB!";
         const lblMessage = await driver.findElementByText(message, SearchOptions.contains);
+        await driver.stopRecordingVideo();
         assert.equal(await lblMessage.text(), message);
     });
 });
