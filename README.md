@@ -168,7 +168,7 @@ export class HomeComponent implements OnInit {
 
 ### <img src="https://raw.githubusercontent.com/skhye05/NativeScript-Bubble-Navigation/master/res/vue.png" width="20"/> Vue
 
-### app.js
+#### app.js
 
 ```javascript
 
@@ -182,7 +182,7 @@ new Vue({
 
 ```
 
-### your-component.vue
+#### your-component.vue
 
 ```html
 <template>
@@ -242,22 +242,22 @@ export default {
 
 | Property           | Type                          | Description                                        | Platforms     |
 | ------------------ | ----------------------------- | -------------------------------------------------- | ------------- |
-| tabs               | `Array<BubbleNavigationItem>` | Array containing the tabs for the BottomNavigation | Android & iOS |
-| padding            | `number`                      | Set Bubble Tab padding                             | Android       |
-| tabBackgroundColor | `string`                      | Set Tab Bar Background Color                       | Android & iOS |
-| elevation          | `number`                      | Set tab elevation/ shadow                          | Android       |
+| tabs               | `Array<BubbleNavigationItem>` | Array containing the tabs for the BottomNavigation | ![android](https://cdn4.iconfinder.com/data/icons/logos-3/228/android-16.png)  ![apple](https://cdn3.iconfinder.com/data/icons/picons-social/57/16-apple-16.png) |
+| padding            | `number`                      | Set Bubble Tab padding                             | ![android](https://cdn4.iconfinder.com/data/icons/logos-3/228/android-16.png)       |
+| tabBackgroundColor | `string`                      | Set Tab Bar Background Color                       | ![android](https://cdn4.iconfinder.com/data/icons/logos-3/228/android-16.png)  ![apple](https://cdn3.iconfinder.com/data/icons/picons-social/57/16-apple-16.png) |
+| elevation          | `number`                      | Set tab elevation/ shadow                          | ![android](https://cdn4.iconfinder.com/data/icons/logos-3/228/android-16.png)       |
 
 #### Events
 
 | Property    | Type                                           | Description                                                                         | Platforms     |
 | ----------- | ---------------------------------------------- | ----------------------------------------------------------------------------------- | ------------- |
-| tabSelected | `function ($event: OnTabSelectedEventData) {}` | Event get trigger every time the user select a new tab that receive an event object | Android & iOS |
+| tabSelected | `function ($event: OnTabSelectedEventData) {}` | Event get trigger every time the user select a new tab that receive an event object | ![android](https://cdn4.iconfinder.com/data/icons/logos-3/228/android-16.png)  ![apple](https://cdn3.iconfinder.com/data/icons/picons-social/57/16-apple-16.png) |
 
 #### Methods
 
 | Property                   | Type   | Description                   | Platforms     |
 | -------------------------- | ------ | ----------------------------- | ------------- |
-| `selectTab(index: number)` | `Void` | Select a tab programmatically | Android & iOS |
+| `selectTab(index: number)` | `Void` | Select a tab programmatically | ![android](https://cdn4.iconfinder.com/data/icons/logos-3/228/android-16.png)  ![apple](https://cdn3.iconfinder.com/data/icons/picons-social/57/16-apple-16.png) |
 
 
 ### BubbleNavigationItem
@@ -266,10 +266,10 @@ export default {
 
 | Property      | Type     | Description                                                        | Platforms     |
 | ------------- | -------- | ------------------------------------------------------------------ | ------------- |
-| title         | `string` | Select a tab title                                                 | Android & iOS |
-| icon          | `string` | Select a tab icon                                                  | Android & iOS |
-| colorActive   | `color`  | Select a active color, the color of the tab when it's selected     | Android & iOS |
-| colorInactive | `color`  | Select a active color, the color of the tab when it isn't selected | Android & iOS |
+| title         | `string` | Select a tab title                                                 | ![android](https://cdn4.iconfinder.com/data/icons/logos-3/228/android-16.png)  ![apple](https://cdn3.iconfinder.com/data/icons/picons-social/57/16-apple-16.png) |
+| icon          | `string` | Select a tab icon                                                  | ![android](https://cdn4.iconfinder.com/data/icons/logos-3/228/android-16.png)  ![apple](https://cdn3.iconfinder.com/data/icons/picons-social/57/16-apple-16.png) |
+| colorActive   | `color`  | Select a active color, the color of the tab when it's selected     | ![android](https://cdn4.iconfinder.com/data/icons/logos-3/228/android-16.png)  ![apple](https://cdn3.iconfinder.com/data/icons/picons-social/57/16-apple-16.png) |
+| colorInactive | `color`  | Select a active color, the color of the tab when it isn't selected | ![android](https://cdn4.iconfinder.com/data/icons/logos-3/228/android-16.png)  ![apple](https://cdn3.iconfinder.com/data/icons/picons-social/57/16-apple-16.png) |
 
 ## Limitations
 
