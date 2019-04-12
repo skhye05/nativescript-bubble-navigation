@@ -1,3 +1,5 @@
+/// <reference path="./typings/bubble-navigation.ios.d.ts" />
+
 import { BubbleNavigationBase, BubbleNavigationItemBase, tabsProperty, tabBackgroundColorProperty } from "./bubble-navigation.common";
 import { textProperty, Color } from "tns-core-modules/ui/text-base/text-base";
 import { ImageSource, fromFileOrResource } from "tns-core-modules/image-source/image-source";

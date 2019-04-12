@@ -4,7 +4,7 @@ import { NativeScriptModule } from "nativescript-angular/nativescript.module";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 
-import { NativescriptBubbleNavigationModule } from "nativescript-bubble-navigation/angular";
+import { BubbleNavigationModule } from "nativescript-bubble-navigation/angular";
 
 @NgModule({
     bootstrap: [
@@ -13,7 +13,7 @@ import { NativescriptBubbleNavigationModule } from "nativescript-bubble-navigati
     imports: [
         NativeScriptModule,
         AppRoutingModule,
-        NativescriptBubbleNavigationModule
+        BubbleNavigationModule
     ],
     declarations: [
         AppComponent

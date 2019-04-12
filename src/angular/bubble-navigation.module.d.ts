@@ -1,2 +1,2 @@
-export declare class NativescriptBubbleNavigationModule {
+export declare class BubbleNavigationModule {
 }
