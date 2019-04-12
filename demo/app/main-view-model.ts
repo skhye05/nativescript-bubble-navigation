@@ -1,8 +1,8 @@
 import { Observable } from 'tns-core-modules/data/observable';
-import { BubbleNavigation, BubbleNavigationItem } from 'nativescript-bubble-navigation';
+import { BubbleNavigationItem } from 'nativescript-bubble-navigation';
 
 export class HelloWorldModel extends Observable {
-  public title: string = 'HOME TAB';
+  public title: string = 'HOME TAB!';
   public bg: string = '#e57373';
   public tabs: BubbleNavigationItem[];
 
@@ -16,9 +16,4 @@ export class HelloWorldModel extends Observable {
       new BubbleNavigationItem('Notify', 'ic_playlist', '#4caf50', '#81c784')
     ];
   }
-
-  // public onTabSelected(index: number): void {
-  //   console.log('position =>', this.tabs[index].title);
-  //   this.title = this.tabs[index].title;
-  // }
 }

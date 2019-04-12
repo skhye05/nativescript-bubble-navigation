@@ -3,16 +3,7 @@
     <ActionBar class="action-bar">
       <Label class="action-bar-title" text="Home"></Label>
     </ActionBar>
-
-    <GridLayout>
-      <Label class="info" horizontalAlignment="center" verticalAlignment="center">
-        <FormattedString>
-          <Span class="fa" text.decode="&#xf135; "/>
-          <Span :text="message"/>
-        </FormattedString>
-      </Label>
-    </GridLayout>
-
+    
     <GridLayout rows="* auto" colunms="*" :backgroundColor="bg">
       <StackLayout row="0" class="p-20">
         <Label class="h1" color="white" horizontalAlignment="center" :text="title"></Label>

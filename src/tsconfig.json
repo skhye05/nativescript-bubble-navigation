@@ -2,29 +2,26 @@
     "compilerOptions": {
         "target": "es5",
         "module": "commonjs",
-        "lib": [
-            "es6",
-            "dom"
-        ],
-        "baseUrl": ".",
+        "declaration": true,
         "removeComments": true,
         "noLib": false,
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
+        "skipLibCheck": true,
+        "lib": ["es6", "dom"],
+        "sourceMap": true,
         "pretty": true,
-        "noEmitHelpers": true
+        "allowUnreachableCode": false,
+        "allowUnusedLabels": false,
+        "noEmitHelpers": true,
+        "noEmitOnError": false,
+        "noImplicitAny": false,
+        "noImplicitReturns": true,
+        "noImplicitUseStrict": false,
+        "noFallthroughCasesInSwitch": true
     },
-    "include": [
-        "**/*.ts",
-        "!*.d.ts"
-    ],
     "exclude": [
-        "node_modules",
-        "platforms",
-        "hooks"
+        "node_modules"
     ],
-    "compileOnSave": false,
-    "angularCompilerOptions": {
-        "skipTemplateCodegen": true
-    }
+    "compileOnSave": false
 }

@@ -45,7 +45,11 @@ export class BubbleNavigation extends BubbleNavigationBase {
     }
 
     bindTabs(tabs: BubbleNavigationItem[]) {
-        if (!this.tabs) { this._tabs = tabs; }
+        if (this.tabs) {
+            return;
+        }
+
+        this._tabs = tabs;
 
         for (let tab of tabs) {
             const bubbleToggle = new BubbleToggleView(this._context);
