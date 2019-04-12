@@ -1,2 +1,12 @@
-platform :ios, '12.0'
+platform :ios, '10.0'
 pod 'BubbleTabBar', :git => 'https://github.com/skhye05/bubble-icon-tabbar.git'
+
+post_install do |installer|
+    installer.pods_project.targets.each do |target|
+      if target.name == 'BubbleTabBar'
+        target.build_configurations.each do |config|
+          config.build_settings['SWIFT_VERSION'] = '4.2'
+        end
+      end
+    end
+  end
