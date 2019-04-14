@@ -1,8 +1,8 @@
 /// <reference path="./typings/bubble-navigation.ios.d.ts" />
 
 import { BubbleNavigationBase, BubbleNavigationItemBase, tabsProperty, tabBackgroundColorProperty } from "./bubble-navigation.common";
-import { textProperty, Color } from "tns-core-modules/ui/text-base/text-base";
-import { ImageSource, fromFileOrResource } from "tns-core-modules/image-source/image-source";
+import { Color } from "tns-core-modules/ui/text-base/text-base";
+import { fromFileOrResource } from "tns-core-modules/image-source/image-source";
 import { isFileOrResourcePath } from "tns-core-modules/utils/utils";
 import { ios } from 'tns-core-modules/application';
 
@@ -52,9 +52,6 @@ export class BubbleNavigation extends BubbleNavigationBase {
         return this._tabBarController.tabBar;
     }
 
-    /**
-     * Initializes properties/listeners of the native view.
-     */
     initNativeView(): void {
         (<any>this.nativeView).owner = this;
         super.initNativeView();
@@ -62,7 +59,6 @@ export class BubbleNavigation extends BubbleNavigationBase {
     }
 
     disposeNativeView(): void {
-        // Remove reference from native listener to this instance.
         (<any>this.nativeView).owner = null;
 
         super.disposeNativeView();
@@ -163,9 +159,3 @@ export class BubbleNavigationItem extends BubbleNavigationItemBase {
         super(title, icon, colorActive, colorInactive);
     }
 }
-
-
-const rootVC = function () {
-    let appwindow = UIApplication.sharedApplication.keyWindow;
-    return appwindow.rootViewController;
-};
