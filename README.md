@@ -5,11 +5,11 @@
 [![Build Status][build-status]][build-url]
 
  [build-status]:https://travis-ci.org/skhye05/nativescript-bubble-navigation.svg?branch=master
- [build-url]:https://travis-ci.org/skhye05/nativescript-bubble-navigationF
+ [build-url]:https://travis-ci.org/skhye05/nativescript-bubble-navigation
 
 ## Overview
 
- Nativescript Multi Select is a navigation tab plugins which provides beautiful navigations.
+ Nativescript Bubble Navigation is a navigation tab plugins which provides beautiful navigations.
 
  <p>
   <img src="https://raw.githubusercontent.com/skhye05/NativeScript-Bubble-Navigation/master/ios.gif"  width="300"/>
@@ -115,17 +115,14 @@ import { Component, OnInit } from "@angular/core";
 import { OnTabSelectedEventData, BubbleNavigationItem } from 'nativescript-bubble-navigation';
 
 @Component({
-    selector: "Home",
-    moduleId: module.id,
-    templateUrl: "./home.component.html"
+  ...
 })
-export class HomeComponent implements OnInit {
+export class YourComponent implements OnInit {
     public title: string = 'HOME TAB!';
     public bg: string = '#e57373';
     public tabs: BubbleNavigationItem[];
 
     constructor() {
-        // Use the component constructor to inject providers.
         this.tabs = [
             new BubbleNavigationItem('Home', 'ic_home', '#f44336', '#e57373'),
             new BubbleNavigationItem('Search', 'ic_search', '#03a9f4', '#64b5f6'),
@@ -135,7 +132,7 @@ export class HomeComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        // Init your component properties here.
+        ...
     }
 
     onBottomNavigationTabSelected(args: OnTabSelectedEventData): void {
