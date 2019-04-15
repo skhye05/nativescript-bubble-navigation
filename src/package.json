@@ -1,6 +1,6 @@
 {
     "name": "nativescript-bubble-navigation",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Nativescript plugin for Android & iOS that create beautiful navigation tabs",
     "main": "bubble-navigation",
     "typings": "index.d.ts",
