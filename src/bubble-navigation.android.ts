@@ -1,4 +1,4 @@
-/// <reference path="./typings/bubble-navigation.android.d.ts" />
+/// <reference path="./platforms/android/bubble-navigation.android.d.ts" />
 
 import {
     BubbleNavigationBase,
@@ -45,9 +45,9 @@ export class BubbleNavigation extends BubbleNavigationBase {
     }
 
     bindTabs(tabs: BubbleNavigationItem[]) {
-        if (this.tabs) {
-            return;
-        }
+        // if (this.tabs) {
+        //     return;
+        // }
 
         this._tabs = tabs;
 
