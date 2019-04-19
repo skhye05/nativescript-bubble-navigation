@@ -38,7 +38,7 @@ matrix:
       script: 
         - cd src && npm run build && npm pack
         - cd ../demo-ng && tns plugin add ../src/*.tgz
-        - npm i && tns build ios --bundle --env.uglify --env.aot --env.snapshot
+        - npm i && tns build ios --bundle --env.uglify --env.aot
     - os: osx
       env:
         - WebPackiOS
