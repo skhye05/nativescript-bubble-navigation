@@ -1,7 +1,7 @@
-import { NgModule, Directive } from "@angular/core";
+import { NgModule, Directive } from '@angular/core';
 
 @Directive({
-    selector: "BubbleNavigation"
+    selector: 'BubbleNavigation'
 })
 export declare class BubbleNavigationDirective {
 }

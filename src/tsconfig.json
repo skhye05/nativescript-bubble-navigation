@@ -21,8 +21,7 @@
         "noFallthroughCasesInSwitch": true
     },
     "exclude": [
-        "node_modules",
-        "angular"
+        "node_modules"
     ],
     "compileOnSave": false,
     "angularCompilerOptions": {

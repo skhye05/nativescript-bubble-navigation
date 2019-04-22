@@ -1,8 +1,8 @@
-import { NgModule, Directive } from "@angular/core";
-import { registerElement } from "nativescript-angular/element-registry";
+import { NgModule, Directive } from '@angular/core';
+import { registerElement } from 'nativescript-angular/element-registry';
 
 @Directive({
-    selector: "BubbleNavigation"
+    selector: 'BubbleNavigation'
 })
 export class BubbleNavigationDirective { }
 
@@ -12,4 +12,4 @@ export class BubbleNavigationDirective { }
 })
 export class BubbleNavigationModule { }
 
-registerElement("BubbleNavigation", () => require("../").BubbleNavigation);
+registerElement('BubbleNavigation', () => require('../').BubbleNavigation);
