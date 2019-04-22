@@ -135,7 +135,7 @@ export class YourComponent implements OnInit {
         ...
     }
 
-    onBottomNavigationTabSelected(args: OnTabSelectedEventData): void {
+    onBubbleNavigationTabSelected(args: OnTabSelectedEventData): void {
         this.title = args.name.toUpperCase() + ' TAB!';
         this.bg = this.tabs[args.position].colorInactive;
 
@@ -157,7 +157,7 @@ export class YourComponent implements OnInit {
         <Label class="h1" color="white" horizontalAlignment="center" [text]="title"></Label>
     </StackLayout>
 
-    <BubbleNavigation (tabSelected)="onBottomNavigationTabSelected($event)" row="1" [tabs]="tabs"
+    <BubbleNavigation (tabSelected)="onBubbleNavigationTabSelected($event)" row="1" [tabs]="tabs"
         loaded="onBubbleNavigationLoaded" padding="12" tabBackgroundColor="white" elevation="8"></BubbleNavigation>
 </GridLayout>
 
@@ -193,7 +193,7 @@ new Vue({
       </StackLayout>
 
       <BubbleNavigation
-        @tabSelected="onBottomNavigationTabSelected"
+        @tabSelected="onBubbleNavigationTabSelected"
         row="1"
         :tabs="tabs"
         padding="12"
@@ -221,7 +221,7 @@ export default {
         }
     },
     methods: {
-        onBottomNavigationTabSelected(args) {
+        onBubbleNavigationTabSelected(args) {
             this.title = `${args.name.toUpperCase()} TAB!`;
             this.bg = this.tabs[args.position].colorInactive;
             console.log('tab selected ' + args.name + ' at position ' + args.position);
@@ -239,7 +239,7 @@ export default {
 
 | Property           | Type                          | Description                                        | Platforms     |
 | ------------------ | ----------------------------- | -------------------------------------------------- | ------------- |
-| tabs               | `Array<BubbleNavigationItem>` | Array containing the tabs for the BottomNavigation | ![android](https://cdn4.iconfinder.com/data/icons/logos-3/228/android-16.png)  ![apple](https://cdn3.iconfinder.com/data/icons/picons-social/57/16-apple-16.png) |
+| tabs               | `Array<BubbleNavigationItem>` | Array containing the tabs for the BubbleNavigation | ![android](https://cdn4.iconfinder.com/data/icons/logos-3/228/android-16.png)  ![apple](https://cdn3.iconfinder.com/data/icons/picons-social/57/16-apple-16.png) |
 | padding            | `number`                      | Set Bubble Tab padding                             | ![android](https://cdn4.iconfinder.com/data/icons/logos-3/228/android-16.png)       |
 | tabBackgroundColor | `string`                      | Set Tab Bar Background Color                       | ![android](https://cdn4.iconfinder.com/data/icons/logos-3/228/android-16.png)  ![apple](https://cdn3.iconfinder.com/data/icons/picons-social/57/16-apple-16.png) |
 | elevation          | `number`                      | Set tab elevation/ shadow                          | ![android](https://cdn4.iconfinder.com/data/icons/logos-3/228/android-16.png)       |

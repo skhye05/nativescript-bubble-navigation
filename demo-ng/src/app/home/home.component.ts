@@ -25,7 +25,7 @@ export class HomeComponent implements OnInit {
         // Init your component properties here.
     }
 
-    onBottomNavigationTabSelected(args: OnTabSelectedEventData): void {
+    onBubbleNavigationTabSelected(args: OnTabSelectedEventData): void {
         this.title = args.name.toUpperCase() + ' TAB!';
         this.bg = this.tabs[args.position].colorInactive;
 

@@ -7,6 +7,6 @@
         <Label class="h1" color="white" horizontalAlignment="center" [text]="title"></Label>
     </StackLayout>
     
-    <BubbleNavigation (tabSelected)="onBottomNavigationTabSelected($event)" row="1" [tabs]="tabs"
+    <BubbleNavigation (tabSelected)="onBubbleNavigationTabSelected($event)" row="1" [tabs]="tabs"
         loaded="onBubbleNavigationLoaded" padding="12" tabBackgroundColor="white" elevation="8"></BubbleNavigation>
 </GridLayout>

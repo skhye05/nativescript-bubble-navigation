@@ -10,7 +10,7 @@
       </StackLayout>
 
       <BubbleNavigation
-        @tabSelected="onBottomNavigationTabSelected"
+        @tabSelected="onBubbleNavigationTabSelected"
         row="1"
         :tabs="tabs"
         padding="12"
@@ -38,7 +38,7 @@ export default {
         }
     },
     methods: {
-        onBottomNavigationTabSelected(args) {
+        onBubbleNavigationTabSelected(args) {
             this.title = `${args.name.toUpperCase()} TAB!`;
             this.bg = this.tabs[args.position].colorInactive;
             console.log('tab selected ' + args.name + ' at position ' + args.position);
